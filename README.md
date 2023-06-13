@@ -1,1 +1,1 @@
-# xcbnb
+We recommend using these fonts at 7 points and larger in print, 9 pixels and larger on screen. The .ttf, .woff and .woff2 fonts provided in the official release have been manually optimized for screen display, improving clarity and legibility, especially on Windows platforms.
