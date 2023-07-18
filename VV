@@ -1,0 +1,26 @@
+import math
+import torch
+import os
+import unidecode
+from collections import defaultdict, OrderedDict
+from sklearn.datasets import fetch_20newsgroups
+
+from collections import defaultdict
+from torch.utils.data import DataLoader, Subset
+from datasets import load_dataset
+
+
+class ToInt:
+    def __call__(self, pic):
+        return pic * 255
+
+
+def read_fn_label(fn):
+    text2label = {}
+    with open(fn) as fo:
+        reader = csv.reader(fo, delimiter=',', quotechar='"')
+        for row in reader:
+            label, title, desc = row[0], row[1], row[2]
+            text = '. '.join([title, desc])
+            text2label[text] = label
+    return text2label
